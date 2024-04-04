@@ -5,20 +5,20 @@
 class Avctl < Formula
   desc ""
   homepage "https://github.com/fetchai/avctl"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.0/avctl_Darwin_arm64.tar.gz"
-      sha256 "823476901784d9d6ef607125cb107df123bead486b759b43f4d707efd1b80747"
+    if Hardware::CPU.intel?
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.1/avctl_Darwin_x86_64.tar.gz"
+      sha256 "1821ece38d0d3b1b70e2c97a86f16fe0dcaeb6d16a98c8fbeb2d89bba6af1801"
 
       def install
         bin.install "avctl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.0/avctl_Darwin_x86_64.tar.gz"
-      sha256 "7ccaee5516e3b1a6127ec71c2e5dfd6505b920715b91cf7db81c1d63c1aaccab"
+    if Hardware::CPU.arm?
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.1/avctl_Darwin_arm64.tar.gz"
+      sha256 "cda2e06a40d6b7f87fc40f88b1d9be3c1f24cadc2b151e1c52d10f48e14f2d13"
 
       def install
         bin.install "avctl"
@@ -27,17 +27,17 @@ class Avctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.0/avctl_Linux_arm64.tar.gz"
-      sha256 "c4329431a6b36556fa5a8f820d18243f054973470fb31c45f354f1732f4ad887"
+    if Hardware::CPU.intel?
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.1/avctl_Linux_x86_64.tar.gz"
+      sha256 "3146c16292688bf796ed4aa4a5ea1f91955ccdf85c1bd353a359e87f6af3a817"
 
       def install
         bin.install "avctl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.0/avctl_Linux_x86_64.tar.gz"
-      sha256 "94fad7f4e204294134b99c1cbe9192b1aff517bf2a195525ae016ddaee2ded64"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.1/avctl_Linux_arm64.tar.gz"
+      sha256 "b69ec505eab61de27cd1e43b4400d446f504750fdca6413cec63946778588b74"
 
       def install
         bin.install "avctl"
