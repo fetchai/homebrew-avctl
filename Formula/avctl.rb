@@ -10,7 +10,7 @@ class Avctl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/fetchai/avctl/releases/download/v0.1.2/avctl_Darwin_x86_64.tar.gz"
-      sha256 "dd1f2a87c7cff90c9ddc1ebf46b26c921e5e3a9feaed518ab9289f64772c9ddb"
+      sha256 "8b6b676db885911b3f3b365068827fb35bdc44c9964779fc7ddb6b4eabf44ea1"
 
       def install
         bin.install "avctl"
@@ -18,7 +18,7 @@ class Avctl < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/fetchai/avctl/releases/download/v0.1.2/avctl_Darwin_arm64.tar.gz"
-      sha256 "4654e34ee3a6dbe2a67fa823285880671f86ca2c1789c3ff54b0af8b52c5aafb"
+      sha256 "ad539fe2b591f0917d49a1e8b25d416b03dc2d474295e2fbb0eb681ccc2a1283"
 
       def install
         bin.install "avctl"
@@ -29,7 +29,7 @@ class Avctl < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/fetchai/avctl/releases/download/v0.1.2/avctl_Linux_x86_64.tar.gz"
-      sha256 "4063c6747a79781596e9ed43d34b1e02ec0c9a18a1b5b8ce0b56577f52b96ebf"
+      sha256 "a363390fe8a8bdba543e5e23631166d71e05290a0b703f5e4cec900cdb843a4a"
 
       def install
         bin.install "avctl"
@@ -37,7 +37,7 @@ class Avctl < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/fetchai/avctl/releases/download/v0.1.2/avctl_Linux_arm64.tar.gz"
-      sha256 "8748815dae643763e905caac72b7f44f071f46b5c55ba95f876896c23e531448"
+      sha256 "704a4d9e41453e5187ca0ad4de86d10b21136999296b9eaf038cb94f01596e54"
 
       def install
         bin.install "avctl"
