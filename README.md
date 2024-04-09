@@ -10,6 +10,7 @@ This repository is intended for hosting the homebrew formulas for installing `av
 
 1. Using `homebrew` (MacOS, Linux):
    ```bash
+   brew tap fetchai/avctl
    brew install avctl
 
 See [fetchai/avctl](https://github.com/fetchai/avctl) for more details.
