@@ -6,7 +6,7 @@
 
 This repository is intended for hosting the homebrew formulas for installing `avctl` on MacOS and Linux platforms.
 
-## Installation (Not yet available, but coming soon)
+## Installation
 
 1. Using `homebrew` (MacOS, Linux):
    ```bash
