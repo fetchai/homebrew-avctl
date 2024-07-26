@@ -5,20 +5,20 @@
 class Avctl < Formula
   desc ""
   homepage "https://github.com/fetchai/avctl"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.3/avctl_Darwin_x86_64.tar.gz"
-      sha256 "9784a300727e0b303dcc013c3e04edb35dda57fe5f90a5cb6c863537547eb4bd"
+    on_intel do
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.4/avctl_Darwin_x86_64.tar.gz"
+      sha256 "03a8b74d8a0e9a963bb36c6cdf40fd2a21543e59c97a149828460194aef73635"
 
       def install
         bin.install "avctl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.3/avctl_Darwin_arm64.tar.gz"
-      sha256 "bf981ef3899cf1a88d0a8e1888d6ed5dfb11e796bdec884113cdd61f725539ce"
+    on_arm do
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.4/avctl_Darwin_arm64.tar.gz"
+      sha256 "c938dbfd6ab75bd2287523fcdc026be3b594d35217550e25176bd0d9fc00b104"
 
       def install
         bin.install "avctl"
@@ -27,20 +27,24 @@ class Avctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.3/avctl_Linux_x86_64.tar.gz"
-      sha256 "7b2dedc7a25c0ae1951ae26b262b2c8b00b31dc8f19dd833f3754b0036cea51b"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/fetchai/avctl/releases/download/v0.1.4/avctl_Linux_x86_64.tar.gz"
+        sha256 "391ddf6e355f100d99913099ae48e1282d7f5a0df2e28add7cd9548d38d9da91"
 
-      def install
-        bin.install "avctl"
+        def install
+          bin.install "avctl"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.3/avctl_Linux_arm64.tar.gz"
-      sha256 "f09c38bc1323c10602af767e3f18e0df2f46f2dcedfef7dfd1a23fc2a0cfc33d"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/fetchai/avctl/releases/download/v0.1.4/avctl_Linux_arm64.tar.gz"
+        sha256 "70d6d5569dc81410942bf039a56a6fe09329f73a9d7644a78c65de97f6c300bb"
 
-      def install
-        bin.install "avctl"
+        def install
+          bin.install "avctl"
+        end
       end
     end
   end
