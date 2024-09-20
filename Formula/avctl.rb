@@ -5,20 +5,20 @@
 class Avctl < Formula
   desc ""
   homepage "https://github.com/fetchai/avctl"
-  version "0.1.5"
+  version "0.1.6"
 
   on_macos do
     on_intel do
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.5/avctl_Darwin_x86_64.tar.gz"
-      sha256 "414d72aeeb58c3f405b8d72877d9f3184409ea309a4558066ecc8e2e96fc0e16"
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.6/avctl_Darwin_x86_64.tar.gz"
+      sha256 "1437288eb70533e10583ed95c4f174a0b5bdae07ffff97b67d057214289fb04f"
 
       def install
         bin.install "avctl"
       end
     end
     on_arm do
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.5/avctl_Darwin_arm64.tar.gz"
-      sha256 "428c3074e469e080bc7c49d384e3d470526ec4a4d8c3e95151da6c564b4cada2"
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.6/avctl_Darwin_arm64.tar.gz"
+      sha256 "2fef54b84982956b1d7caafaf34383ed1d39726c4b4fc30edb7a215689fd7add"
 
       def install
         bin.install "avctl"
@@ -29,8 +29,8 @@ class Avctl < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fetchai/avctl/releases/download/v0.1.5/avctl_Linux_x86_64.tar.gz"
-        sha256 "83e1e3a185d79704419c33afb74daf580951323dd39b142e2fb7188a65361d5b"
+        url "https://github.com/fetchai/avctl/releases/download/v0.1.6/avctl_Linux_x86_64.tar.gz"
+        sha256 "ace12c0759ce51651300004c72952e3922844370b3f814bf22eb4ec88a7e5b33"
 
         def install
           bin.install "avctl"
@@ -39,8 +39,8 @@ class Avctl < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fetchai/avctl/releases/download/v0.1.5/avctl_Linux_arm64.tar.gz"
-        sha256 "0a625034285c37f00eaa3fc8f23fdbe4674f17aee8a4910dcde61c205b25ffb8"
+        url "https://github.com/fetchai/avctl/releases/download/v0.1.6/avctl_Linux_arm64.tar.gz"
+        sha256 "d7787b16fd456ae6cc0bf1bd2223b2411b36711425f0a80d34c6b689ab73a807"
 
         def install
           bin.install "avctl"
