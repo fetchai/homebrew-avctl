@@ -5,20 +5,20 @@
 class Avctl < Formula
   desc ""
   homepage "https://github.com/fetchai/avctl"
-  version "0.1.9"
+  version "0.1.10"
 
   on_macos do
     on_intel do
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.9/avctl_Darwin_x86_64.tar.gz"
-      sha256 "558a1aa8e6573b5bcf6c766796042b31e5a8555498548f6b4faeef53dcdfd624"
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.10/avctl_Darwin_x86_64.tar.gz"
+      sha256 "9d23f66a19c9449656896cc99a2a20edbad0e69385c83d5b833b1ce6cb22734f"
 
       def install
         bin.install "avctl"
       end
     end
     on_arm do
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.9/avctl_Darwin_arm64.tar.gz"
-      sha256 "5f502b223f6a31e966461e3286bf5c6eec09b9411a938a4408b6ca4c556234b6"
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.10/avctl_Darwin_arm64.tar.gz"
+      sha256 "498e6820400fd4416872f7d24cca11ea72ab629ebbaeca1b2ff6ba4070f72542"
 
       def install
         bin.install "avctl"
@@ -29,8 +29,8 @@ class Avctl < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fetchai/avctl/releases/download/v0.1.9/avctl_Linux_x86_64.tar.gz"
-        sha256 "7ed8f01dd473adae32efbf4f0435d7db46c3b7c803b009349a87da0d17bd110c"
+        url "https://github.com/fetchai/avctl/releases/download/v0.1.10/avctl_Linux_x86_64.tar.gz"
+        sha256 "f48e718b4459920002b5bf6abe41ae525d31c07ae4dd879c5c041f863dd4a809"
 
         def install
           bin.install "avctl"
@@ -39,8 +39,8 @@ class Avctl < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/fetchai/avctl/releases/download/v0.1.9/avctl_Linux_arm64.tar.gz"
-        sha256 "278ad5823dadece3daba37d8f4bf3f420be93253507bfabbc55b607b3a0457ee"
+        url "https://github.com/fetchai/avctl/releases/download/v0.1.10/avctl_Linux_arm64.tar.gz"
+        sha256 "f9f26e46ad66a69b04298d000eb7e5704443dd71fb2face820f0d01c6b88ec9e"
 
         def install
           bin.install "avctl"
