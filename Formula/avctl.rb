@@ -5,20 +5,20 @@
 class Avctl < Formula
   desc ""
   homepage "https://github.com/fetchai/avctl"
-  version "0.1.14"
+  version "0.1.15"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.14/avctl_Darwin_x86_64.tar.gz"
-      sha256 "49715a7a80abab4ef0f7482efffb0fc3f294783f4409156d7ba7fc6ef0126dc1"
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.15/avctl_Darwin_x86_64.tar.gz"
+      sha256 "6f2069f5ea9d9cb99467d88ad3625213c3fdf4c0ef51b81aa703d3194f924297"
 
       def install
         bin.install "avctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.14/avctl_Darwin_arm64.tar.gz"
-      sha256 "2051a2039e2281f2bf97432d8b7ece66e8918875cd7af87dbe5aa4ccaeabd67e"
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.15/avctl_Darwin_arm64.tar.gz"
+      sha256 "bbf5491e21fffbd608718857a09b43cced52ecf70bf18cdfb163627325d81546"
 
       def install
         bin.install "avctl"
@@ -28,15 +28,15 @@ class Avctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.14/avctl_Linux_x86_64.tar.gz"
-      sha256 "8b6f233c2aa9b5c4c1d25d0128e70deca7f266f96284df6c1923dc357d93a3d9"
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.15/avctl_Linux_x86_64.tar.gz"
+      sha256 "fd2ee8eca6b7d3334c17e5d9ca7dddc27df3c9c2f0a11c458e504e26cb4ba1cd"
       def install
         bin.install "avctl"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.14/avctl_Linux_arm64.tar.gz"
-      sha256 "57c041431c7b6cbab1cc71b15833554489964962233e7c6ba4d6d366c0b37906"
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.15/avctl_Linux_arm64.tar.gz"
+      sha256 "7cb1227d7a7c4cd0cd1626b634934d87046df0733d21469209b5ce2a26a9cfb8"
       def install
         bin.install "avctl"
       end
