@@ -5,39 +5,39 @@
 class Avctl < Formula
   desc ""
   homepage "https://github.com/fetchai/avctl"
-  version "0.1.15"
+  version "0.1.16"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.15/avctl_Darwin_x86_64.tar.gz"
-      sha256 "6f2069f5ea9d9cb99467d88ad3625213c3fdf4c0ef51b81aa703d3194f924297"
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.16/avctl_Darwin_x86_64.tar.gz"
+      sha256 "2617c63a78a09b47d8033bb8f84a7c100a36404da6d19e61c67e1f6d95225a74"
 
-      def install
+      define_method(:install) do
         bin.install "avctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.15/avctl_Darwin_arm64.tar.gz"
-      sha256 "bbf5491e21fffbd608718857a09b43cced52ecf70bf18cdfb163627325d81546"
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.16/avctl_Darwin_arm64.tar.gz"
+      sha256 "7a186d2924fed975a5b04c8456c194f8e970edf3a046b17e1138b3aa9fce84b6"
 
-      def install
+      define_method(:install) do
         bin.install "avctl"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.15/avctl_Linux_x86_64.tar.gz"
-      sha256 "fd2ee8eca6b7d3334c17e5d9ca7dddc27df3c9c2f0a11c458e504e26cb4ba1cd"
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.16/avctl_Linux_x86_64.tar.gz"
+      sha256 "8b7710de632bce0a25fa141233ea466d2f8370539f0c597db10993fc7eebb8d9"
+      define_method(:install) do
         bin.install "avctl"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.15/avctl_Linux_arm64.tar.gz"
-      sha256 "7cb1227d7a7c4cd0cd1626b634934d87046df0733d21469209b5ce2a26a9cfb8"
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/fetchai/avctl/releases/download/v0.1.16/avctl_Linux_arm64.tar.gz"
+      sha256 "048a079744a69d4a7a194f2a8fb1e722f0dd31d62ac3c35efe6ac789dec890eb"
+      define_method(:install) do
         bin.install "avctl"
       end
     end
