@@ -5,20 +5,20 @@
 class Avctl < Formula
   desc ""
   homepage "https://github.com/fetchai/avctl"
-  version "0.1.18"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.18/avctl_Darwin_x86_64.tar.gz"
-      sha256 "3093b306df78648729d336153472d748e3d09256ede102ae00a69e4580673bf4"
+      url "https://github.com/fetchai/avctl/releases/download/v0.2.0/avctl_Darwin_x86_64.tar.gz"
+      sha256 "6f5667024d2f2bf04394bce7eee33d47df17918e40e179f587bb0b2b2cd17254"
 
       define_method(:install) do
         bin.install "avctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.18/avctl_Darwin_arm64.tar.gz"
-      sha256 "f05c82e9e3da51109cafcff51c78d5df938aa31fe2feb00776db10587d37e989"
+      url "https://github.com/fetchai/avctl/releases/download/v0.2.0/avctl_Darwin_arm64.tar.gz"
+      sha256 "87e1ebca86e8d712bd1762fa21fad0a81f1ff02621b300d8466f6ace2681e600"
 
       define_method(:install) do
         bin.install "avctl"
@@ -28,15 +28,15 @@ class Avctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.18/avctl_Linux_x86_64.tar.gz"
-      sha256 "f7b8fcc6f8635359f1f20f856b956e25182052204180df2e5f38133808a95a8d"
+      url "https://github.com/fetchai/avctl/releases/download/v0.2.0/avctl_Linux_x86_64.tar.gz"
+      sha256 "9c27abfeeb64a7e9c6a4d5d4a1f9555c10708d11a05987514ee148257e426bd5"
       define_method(:install) do
         bin.install "avctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/fetchai/avctl/releases/download/v0.1.18/avctl_Linux_arm64.tar.gz"
-      sha256 "ee697987f355db2f960f854920caff386fc6f1c28fe252a4d0a6ffed69a8a440"
+      url "https://github.com/fetchai/avctl/releases/download/v0.2.0/avctl_Linux_arm64.tar.gz"
+      sha256 "c793d3ea567b39500a01deb24fb956cf654d8db31f129f6e659a842d60106fd5"
       define_method(:install) do
         bin.install "avctl"
       end
